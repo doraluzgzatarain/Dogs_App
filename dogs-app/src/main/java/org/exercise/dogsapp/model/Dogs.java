@@ -2,18 +2,26 @@ package org.exercise.dogsapp.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 //POJO
 
 @Entity
-@Table(name="dogs")
+@Table(name="DOGS", schema = "DOGSDB")
 public class Dogs {
-	@Column(nullable = false)
+	
+	@Id
+	@Column(name = "DOG_NAME", nullable = false)
 	private String dogName;
-	@Column(nullable = false)
+	
+	@Column(name = "DESCRIPTION", nullable = false)
 	private String description;
+	
+	@Column(name = "AGE", nullable = false)
 	private int age;
+	
+	@Column(name = "URL", nullable = false)
 	private String url;
 	
 	public Dogs(String dogName, String description, int age, String url) {
