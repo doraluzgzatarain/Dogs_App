@@ -16,7 +16,6 @@ public class DogsController {
 
 	@Autowired
 	public DogsController(DogsService dogsService) {
-		super();
 		this.dogsService = dogsService;
 	} //Constructor
 	

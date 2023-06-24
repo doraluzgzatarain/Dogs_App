@@ -15,9 +15,12 @@ import lombok.extern.slf4j.Slf4j;
 public class DogsService {
 	
 	public final List<Dogs> dogsList = new ArrayList<>();
+	private DogsRepository dogsRepository;
 	
 	@Autowired
-	private DogsRepository dogsRepository;
+	public DogsService(DogsRepository dogsRepository) {
+		this.dogsRepository = dogsRepository;
+	}
 
 	public List<Dogs> getAllDogs() {
 		if(dogsRepository.findAll().isEmpty()) {
@@ -32,5 +35,7 @@ public class DogsService {
 			return dogsRepository.findAll();
 		}
 	}
+
+	
 
 }
