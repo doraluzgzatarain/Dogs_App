@@ -1,0 +1,44 @@
+body{
+	background-color: #F8F8F8;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#title{
+    color: #333333;
+    text-align: center;
+}
+
+.card{
+	display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.imgCardDogs{
+    width:14rem;
+    height: auto;
+    border-radius: 1rem;
+    margin-right:1rem;
+}
+
+.cardBody{
+    background-color: white;
+    border-color: #333333;
+    border-style:dotted;
+    border-width: .15rem;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 8rem;
+    padding: 1rem;
+}
+
+.card-title{
+	color: #333333;
+}
+
+.card-text{
+    color: #666666;
+}

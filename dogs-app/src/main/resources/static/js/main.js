@@ -7,8 +7,7 @@ let dogsPromise = fetch('/api/dogs/', {
   dogsPromise.then((reponse) => {
     reponse.json().then(
       (prods) => {
-        
-        showCardsDogs(dogs);
+        showCardsDogs(prods);
       } //prods
     ) //json
       .catch((err) => {
@@ -27,12 +26,12 @@ function showCardsDogs(dogs) {
         allDogs = dogs.length;
         for (let i = 0; i < allDogs; i++) {
             let card = `
-            <div class="card" style="width: 18rem;">
-              <img src="${dogs[i].url}" class="card-img-top" alt="...">
-              <div class="card-body">
+            <div class="card">
+              <img src="${dogs[i].url}" class="imgCardDogs" alt="...">
+              <div class="card-body cardBody">
                 <h3 class="card-title">${dogs[i].dogName}</h3>
                 <p class="card-text">${dogs[i].description}</p>
-                <h5 class="card-title">${dogs[i].age}</h5>
+                <h5 class="card-title">${"Almost " + dogs[i].age + " years"}</h5>
               </div>
             </div>
             `;
